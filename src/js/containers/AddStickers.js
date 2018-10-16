@@ -7,7 +7,8 @@ let AddSticker = ({ dispatch }) => {
   let text
 
   return (
-    <div>
+    <div className="sticker">
+      <div className="sticker__wrapper">
       <form onSubmit={e => {
         e.preventDefault()
         if (!title.value.trim() || !text.value.trim()) {
@@ -17,16 +18,21 @@ let AddSticker = ({ dispatch }) => {
         title.value = ''
         text.value = ''
       }}>
-        <input ref={node => {
+        <input 
+          placeholder="Sticker title"
+           ref={node => {
           title = node
         }} />
-        <input ref={node => {
+        <input 
+          placeholder="Sticker text"
+          ref={node => {
           text = node
         }} />
         <button type="submit">
           Add Sticker
         </button>
       </form>
+      </div>
     </div>
   )
 }

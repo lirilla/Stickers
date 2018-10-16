@@ -9,10 +9,10 @@ export const addSticker = (title, text) => {
   }
 }
 
-export const loadStickers = () => {
-  //console.log('loadStickers')
+export const deleteSticker = (id) => {
   return {
-    type: 'LOAD_STICKERS'
+    type: 'DELETE_STICKER',
+    id
   }
 }
 
@@ -23,9 +23,9 @@ export const toggleSticker = (id) => {
   }
 }
 
-export const deleteSticker = (id) => {
+/*export const deleteSticker = (id) => {
   return {
     type: 'DELETE_STICKER',
     id
   }
-}
+}*/

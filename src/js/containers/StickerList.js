@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleSticker, loadStickers } from '../actions'
+import { toggleSticker, deleteSticker } from '../actions'
 import StickerList from '../components/StickerList'
 
 const getAllStickers = (stickers) => {
@@ -17,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onStickerClick: (id) => {
       dispatch(toggleSticker(id))
+    },
+    onDeleteSticker: (id) => {
+      dispatch(deleteSticker(id))
     }
   }
 }

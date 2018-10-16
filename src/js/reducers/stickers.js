@@ -35,6 +35,9 @@ const stickers = (state = [], action) => {
       return state.map(t =>
         sticker(t, action)
       )
+    case 'DELETE_STICKER': 
+      localStorage.setItem('Stickers', JSON.stringify(state.filter(item => item.id != action.id)));
+      return state.filter(item => item.id != action.id)
     default:
       return state
   }

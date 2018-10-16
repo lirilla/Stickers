@@ -5,8 +5,10 @@ import '../../css/style.less'
 
 const App = () => (
   <div className="stickers__wrapper">
-    <AddSticker />
-    <AllStickerList />
+  	<div className="stickers__list">
+	    <AddSticker />
+	    <AllStickerList />
+	</div>
   </div>
 )
 
