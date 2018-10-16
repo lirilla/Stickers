@@ -1,0 +1,44 @@
+@sticker: #f7e0e4;
+@stickertext: #464646;
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.stickers {
+	&__wrapper {
+		width: 960px;
+		height: 100%;
+		margin: auto;
+	}
+
+	&__list {
+		overflow: hidden;
+	}
+}
+
+.sticker {
+	display: block;
+	float: left;
+	width: 25%;
+	padding: 15px;
+	height: 200px;
+
+	&__wrapper {
+		color: @stickertext;
+		background: @sticker;
+		padding: 20px;
+		height: 100%;
+		box-shadow: 4px 4px 11px 0px rgba(0, 0, 0, 0.2);
+	}
+
+	&__title {
+	    font-size: 24px;
+	    margin-bottom: 10px;
+	    font-weight: 500;
+	}
+
+	&__text {
+		font-size: 12px;
+	}
+}
