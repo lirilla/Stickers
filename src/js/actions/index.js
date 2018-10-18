@@ -1,11 +1,10 @@
 const uuidv1 = require('uuid/v1')
 
-export const addSticker = (title, text) => {
+export const addSticker = (props) => {
   return {
     type: 'ADD_STICKER',
     id: uuidv1(),
-    title,
-    text
+    props
   }
 }
 
@@ -16,10 +15,20 @@ export const deleteSticker = (id) => {
   }
 }
 
-export const toggleSticker = (id) => {
+export const toggleEdit = (id) => {
   return {
-    type: 'TOGGLE_STICKER',
+    type: 'TOGGLE_EDIT',
     id
+  }
+}
+
+export const saveSticker = (id, props) => {
+  console.log(id)
+  console.log(props)
+  return {
+    type: 'SAVE_STICKER',
+    id,
+    props
   }
 }
 

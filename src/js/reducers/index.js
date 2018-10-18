@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
+import sticker from './sticker'
 import stickers from './stickers'
 
 const stickerApp = combineReducers({
-  stickers,
+  sticker,
+  stickers
 })
 
 export default stickerApp

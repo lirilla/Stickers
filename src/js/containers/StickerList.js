@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleSticker, deleteSticker } from '../actions'
+import { toggleEdit, deleteSticker, saveSticker } from '../actions'
 import StickerList from '../components/StickerList'
 
 const getAllStickers = (stickers) => {
@@ -15,8 +15,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   //dispatch(loadStickers())
   return {
+    onStickerSave: (id, props) => {
+      dispatch(saveSticker(id, props))
+    },
     onStickerClick: (id) => {
-      dispatch(toggleSticker(id))
+      dispatch(toggleEdit(id))
     },
     onDeleteSticker: (id) => {
       dispatch(deleteSticker(id))
